@@ -27,3 +27,4 @@ if rev == temp
 else
     puts "Non-Palindrome Number"
 end
+
