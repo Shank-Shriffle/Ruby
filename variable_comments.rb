@@ -1,5 +1,7 @@
 # ------Testing Local, Instance and Class Variables------
 
+require 'byebug'
+
 class Customer
   # @@no_of_customers is a Class Variable.
   @@no_of_customers = 0
@@ -41,6 +43,7 @@ end
  cust2 = Customer.new("2", "Poul", "New Empire road, Khandala")
  
  # Call Methods
+ byebug
  cust1.display_details()
  cust2.display_details()
  puts ""
@@ -71,4 +74,3 @@ class1obj = Class1.new
 class1obj.print_global
 class2obj = Class2.new
 class2obj.print_global
-
