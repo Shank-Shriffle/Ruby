@@ -67,16 +67,17 @@ def return_multi
 end
 var_ret = return_multi
 # Assigning returned values to muliple variables (Correspondingly)
-x, y, z = return_multi 
+x, y, z = return_multi
 puts "Method returning multiple values: #{return_multi}"
 puts var_ret
-puts y
-puts
+print 'Value of y: ', y
+# print "Value of y: #{y}"      --Also valid (Works same as above)--
+puts "\n\n"
 
-# ------Class vs Instance Methods------
-puts '------Class vs Instance Methods------'
+# ------Class vs Instance Methods vs Method which is outside of Class------
+puts '------Class vs Instance Methods vs Method which is outside of Class------'
 class TestMethods
-  # OR we can write- TestMethods.class_method
+  # def TestMethods.class_method  --Also valid--
   def self.class_method
     puts 'Hello from class method.'
     a = 11
@@ -90,13 +91,44 @@ class TestMethods
     b = 20
     a - b
   end
-  random_var = 112
-  puts "#{random_var}"
+
+  # Making Object inside Class.
+  i_obj = TestMethods.new
+
+  print 'Calling class method inside Class: '
+  class_method
+  # TestMethods.class_method    --Also valid--
+  # self.class_method           --Also valid--
+
+  print 'Calling instance method inside Class: '
+  TestMethods.new.inst_method
+  # i_obj.inst_method           --Also valid--
+  # obj.inst_method             --Invalid Syntax (Error)--
+  # inst_method                 --Invalid Syntax (Error)--
+
+  puts 'Calling outside method inside Class: NOT POSSIBLE.'
+  # TestMethods.outside_method  --Invalid Syntax (Error)--
+  # i_obj.outside_method        --Invalid Syntax (Error)--
+  # outside_method              --Invalid Syntax (Error)--
 end
 
-obj = TestMethods.new
-
-puts 'Calling class method: '
+print 'Calling class method: '
 TestMethods.class_method
-puts 'Calling instance method: '
+# self.class_method             --Invalid Syntax (Error)--
+# class method can be defined using 'self' keyword but
+# cannot be called using 'self' keyword outside the class.
+
+obj = TestMethods.new
+print 'Calling instance method: '
 obj.inst_method
+# TestMethods.new.inst_method      --Also valid--
+# inst_method                   --Invalid Syntax (Error)--
+
+# Method outside class is marked as 'private' by default.
+def outside_method
+  puts 'Hello from method outside class.'
+end
+print 'Calling method which is outside of class: '
+outside_method
+# obj.outside_method            --Invalid Syntax (Error)--
+# TestMethods.outside_method    --Invalid Syntax (Error)--

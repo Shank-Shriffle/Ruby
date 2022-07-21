@@ -1,0 +1,107 @@
+$$ ------Methods------
+
+Q1. Method without Parentheses()?
+Ans: In Ruby, when you define or call (execute, use) a method, 
+you can omit the parentheses.
+So these lines mean exactly the same:
+
+puts add_two 2
+puts add_two(2)   *Use this convention.
+puts(add_two 2)
+puts(add_two(2))
+
+* Use parentheses for all method calls that take arguments, 
+  except for the methods puts and p (and later: require and include).
+* If a method does not take any arguments, then do not add empty 
+  parentheses, omit them.
+
+Q2. Boolean 'and' vs Logical '&&' (Used in If condition)?
+Ans: Both works the same, but '&&' has higher precedence than 'and'.
+Same follows of 'or' and '||'.
+Precedence Order:  '&&,||'  >  '='  >  'and/or'
+
+Q3. Defining class method and Calling class method inside and outside of Class?
+Ans: Syntax:
+
+      class ClassName
+        def self.class_method
+                # or  
+        def ClassName.class_method
+          puts "I am a class method"
+        end
+
+        # Calling method inside of Class.
+        class_method
+        self.class_method
+        ClassName.class_method
+        # All 3 of above are valid.
+      end
+
+      # Calling method.
+      ClassName.class_method
+      # self.class_method      #Invalid syntax (Error).
+      # class_method           #Invalid syntax (Error).
+
+Q4. Defining instance method and Calling instance method?
+Ans: Syntax:
+
+      class ClassName
+        def instance_method
+          puts "I am an instance method"
+        end
+        
+
+      end
+
+      # Calling method.
+      obj = ClassName.new
+      obj.instance_method
+            # or
+      ClassName.new.instance_method => "I am an instance method"
+
+Q5. Method outside class?
+Ans: Syntax:
+
+      class SampleClass
+        # Some Code
+      end
+
+      def outside_method
+        puts 'Hello from method outside class.'
+      end
+
+      print "Calling method which is outside of class: "
+      outside_method
+      # obj.outside_method            --Invalid Syntax (Error)--
+      # TestMethods.outside_method    --Invalid Syntax (Error)--
+
+Q6. Can we call class method, instance method and outside method 
+    inside a Class?
+Ans: Class Method: Yes, class method can be called inside the Class.
+Like this,
+
+      class_method
+            # or
+      ClassName.class_method    
+            # or
+      self.class_method 
+
+All 3 of above are valid syntax.
+
+Instance Method: Yes, instance method can be called inside the Class
+using object of the same class. Like this,
+
+      ClassName.new.inst_method
+            # or
+      i_obj = ClassName.new
+      i_obj.inst_method   
+      # obj.inst_method      --Invalid Syntax (Error: Cannot 
+                              use object outside the Class)--
+
+Outside Method: No, outside methods cannot be used in a Class at all.
+
+Q7. 
+
+$$ ------Blocks------
+
+Q1. 
