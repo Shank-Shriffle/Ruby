@@ -100,8 +100,33 @@ using object of the same class. Like this,
 
 Outside Method: No, outside methods cannot be used in a Class at all.
 
-Q7. 
+Q7. Calling vs Printing a method using puts?
+Ans: Syntax: 
+
+      def sample_method
+        puts "I am Sample Mehtod."
+        x = 251
+        y = 351
+      end
+
+      # Simply Calling a method.
+      puts "Simply calling a method: "
+      # This won't print the x and y value or last statement value.
+      sample_method
+      puts
+      # OUTPUT:- I am Sample Mehtod.
+
+      # Printing a method, It prints the last statement along with any 
+      # puts statements.
+      puts "Now printing the method using puts: "
+      puts sample_method
+      # OUTPUT:- I am Sample Mehtod.
+                 351
+      puts 
+      puts "Printing a method, prints its last statement: #{sample_method}"
+      # OUTPUT:- I am Sample Mehtod.
+                 Printing a method, prints its last statement: 351
 
 $$ ------Blocks------
 
-Q1. 
+Q1.  
