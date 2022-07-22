@@ -55,7 +55,6 @@ end
  puts
 
  
-
 # ------Testing Global Variables------ 
 
 $global_variable = 15
