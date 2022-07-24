@@ -15,57 +15,58 @@ class Customer
     @cust_id = id
     @cust_name = name
     @cust_addr = addr
-  # @cust_id, @cust_name, @cust_addr are Instance Variables.
+    # @cust_id, @cust_name, @cust_addr are Instance Variables.
   end
 
-  def display_details()
-    puts "Customer id #@cust_id"
-    puts "Customer name #@cust_name"
-    puts "Customer address #@cust_addr"
+  def display_details
+    puts "Customer id #{@cust_id}"
+    puts "Customer name #{@cust_name}"
+    puts "Customer address #{@cust_addr}"
 
-    # NOTE − In Ruby, you CAN access value of any variable or 
-    # constant by putting a hash (#) character just before that 
+    # NOTE: − In Ruby, you CAN access value of any variable or
+    # constant by putting a hash (#) character just before that
     # variable or constant.
   end
-  def total_no_of_customers()
+
+  def total_no_of_customers
     @@no_of_customers += 1
-    puts "Total number of customers: #@@no_of_customers"
+    puts "Total number of customers: #{@@no_of_customers}"
   end
 
-  def show()
+  def show
     puts "Value of first Constant is #{VAR1}"
     puts "Value of second Constant is #{VAR2}"
   end
 end
- 
- # Create Objects
- cust1 = Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
- cust2 = Customer.new("2", "Poul", "New Empire road, Khandala")
- 
- # Call Methods
- byebug
- cust1.display_details()
- cust2.display_details()
- puts ""
- cust1.total_no_of_customers()
- cust2.total_no_of_customers()
- # A static variable is implemented in ruby using class variable.
- puts ""
- cust1.show
- puts
 
- 
-# ------Testing Global Variables------ 
+# Create Objects
+cust1 = Customer.new('1', 'John', 'Wisdom Apartments, Ludhiya')
+cust2 = Customer.new('2', 'Poul', 'New Empire road, Khandala')
+
+# Call Methods
+byebug
+cust1.display_details
+cust2.display_details
+puts ''
+cust1.total_no_of_customers
+cust2.total_no_of_customers
+# A static variable is implemented in ruby using class variable.
+puts ''
+cust1.show
+puts
+
+# ------Testing Global Variables------
 
 $global_variable = 15
 class Class1
   def print_global
-    puts "Global variable in Class1 is #$global_variable"
+    puts "Global variable in Class1 is #{$global_variable}"
   end
 end
+
 class Class2
   def print_global
-    puts "Global variable in Class2 is #$global_variable"
+    puts "Global variable in Class2 is #{$global_variable}"
   end
 end
 
