@@ -129,7 +129,7 @@ Ans: Syntax:
 
 $$ ------Blocks------
 
-Q1.  
+Q1. 
 
 $$ ------Modules------
  
@@ -168,5 +168,17 @@ Ans: The require statement is similar to the include statement of C and C++ and 
 Q3. require vs require_relative?
 Ans: The general rule of thumb is 'require' should be used for external files, like gems,
  while require_relative should be used for referring to files within your directory. 
- Though you can call on absolute paths using both methods, but require_relative's scope is wider 
- and is aware of the entire directory where the program resides. 
+ Though you can call on absolute paths using both methods, but require_relative's scope 
+ is wider and is aware of the entire directory where the program resides. 
+
+Q4. Class include Module, Module include Module, Class include Class, Module include Class?
+Ans: Only Module are included, Class is never included. (Only statement 1 & 2 are True.)
+Class can include Module and Module can also include another Module.
+
+$$ ------Strings------
+
+Q1. String Interpolation #{ }?
+Ans: You can have actual code inside the interpolation #{ }. Ruby calls the 'to_s' method 
+on the string interpolation block, his tells the object to convert itself into a string.
+
+Q2. 
