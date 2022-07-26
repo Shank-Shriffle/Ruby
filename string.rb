@@ -86,14 +86,7 @@ str5 = 'Kashmir is intergral part of India.'
 print str5.split('i')
 puts
 
-puts '---Join---'
-# arr = ['a', 'b', 'c']       # Commented to prevent it from autoformatting.
-# It converts an Array to a String.
-# puts arr.join                 # "abc"
-# It’s also possible to pass an argument to join, this argument is the character separator.
-# puts arr.join('-')            # "a-b-c"
-
-puts '---Array to Integer using to_i---'
+puts '---String to Integer using to_i---'
 puts '49'.to_i
 puts 'abc'.to_i                # 0
 

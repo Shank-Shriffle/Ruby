@@ -127,10 +127,6 @@ Ans: Syntax:
       # OUTPUT:- I am Sample Mehtod.
                  Printing a method, prints its last statement: 351
 
-$$ ------Blocks------
-
-Q1. 
-
 $$ ------Modules------
  
 Q1. Module vs Class?
@@ -181,4 +177,14 @@ Q1. String Interpolation #{ }?
 Ans: You can have actual code inside the interpolation #{ }. Ruby calls the 'to_s' method 
 on the string interpolation block, his tells the object to convert itself into a string.
 
-Q2. 
+$$ ------Iterator------
+
+Q1. each vs map Iterator?
+Ans: Array#each executes the given block for each element of the array, 
+then returns the array itself.
+Array#map also executes the given block for each element of the array, 
+but returns a new array whose values are the return values of each iteration of the block.
+
+
+Q2. collect Iterator?
+Ans: 
