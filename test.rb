@@ -22,13 +22,13 @@ puts '2  *  5';
 x,rev,flag = 656,0,false;
 temp = x;
 while x != 0
-    rem = x % 10;
-    rev = rev * 10 + rem;
-    x = x/10; 
+  rem = x % 10;
+  rev = rev * 10 + rem;
+  x = x/10; 
 end
 
 if rev == temp
-    puts "Palindrome Number";
+  puts "Palindrome Number";
 else
-    puts "Non-Palindrome Number";
+  puts "Non-Palindrome Number";
 end

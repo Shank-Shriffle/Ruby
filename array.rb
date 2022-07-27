@@ -8,6 +8,16 @@ nums = [1, 2, 3, 4, 5]
 print nums
 puts
 
+puts "------Accessing Array------"
+print "Num at index 3: "
+puts nums[3]
+print "Num at index 2: #{nums[2]}"
+puts
+print "Applying Index directly to Array object: "
+puts [2,4,6,8,10][4]
+print "Negative index starts form backward: "
+puts [2,4,6,8,10][-2]
+
 puts '---Value to Element---'
 # You can assign a value to each element in the array as follows. (Adds Mango 5 times.)
 arr1 = Array.new(5, 'Mango')
