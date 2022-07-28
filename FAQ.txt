@@ -177,6 +177,32 @@ Q1. String Interpolation #{ }?
 Ans: You can have actual code inside the interpolation #{ }. Ruby calls the 'to_s' method 
 on the string interpolation block, his tells the object to convert itself into a string.
 
+Q2. String#+ vs String#<< vs String#concat ?
+Ans: String#+ : string + other_string → new_string
+Returns a new String containing other_string concatenated to self.
+
+String#<< : string << object → string
+Concatenates object to self and returns self.
+Takes single argument(object).
+
+String#concat : concat(*objects) → string
+Concatenates each object in objects to self and returns self.
+Takes multiple arguments(objects).
+
+$$ ------Array------
+
+Q1. Array#+ vs Array#concat ?
+Ans: According to the Ruby docs, the difference is:
+Array#+ :
+Concatenation — Returns a new array built by concatenating the two arrays together 
+to produce a third array.
+
+Array#concat :
+Appends the elements of other_ary to self.
+
+So the + operator will create a new array each time it is called (which is expensive), 
+while .concat only appends the new element.
+
 $$ ------Iterator------
 
 Q1. each vs map Iterator?
@@ -188,3 +214,17 @@ but returns a new array whose values are the return values of each iteration of 
 
 Q2. collect Iterator?
 Ans: 
+
+$$ ------General------
+
+Q1. Kernel Module?
+Ans: The Kernel module is included by class Object, 
+so its methods are available in every Ruby object.
+
+Q2. Object class?
+Ans:Object is the default root of all Ruby objects. 
+Object inherits from BasicObject which allows creating alternate object hierarchies. 
+Methods on Object are available to all classes unless explicitly overridden.
+
+Q3. BasicObject class?
+Ans: BasicObject is the parent class of all classes in Ruby. It's an explicit blank class.

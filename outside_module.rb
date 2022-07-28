@@ -4,7 +4,9 @@ require_relative 'module'
 # require './module'      --Also Valid--
 
 puts "------Outside Module starts here------"
-include Tools
+# include is NOT REQUIRED here because Tools is already included 
+# in the module.rb file itself, which is required above.
+# include Tools  
 Tools.display
 # display                 --Also Valid--
 

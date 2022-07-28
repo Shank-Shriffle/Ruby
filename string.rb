@@ -90,11 +90,13 @@ puts '---String to Integer using to_i---'
 puts '49'.to_i
 puts 'abc'.to_i                # 0
 
-puts '---String Concatenation using << and concat---'
+puts '---String Concatenation using +, << and concat---'
 str6 = 'Joey: '
 puts str6 << 'How'
+# String#<< takes only single argument. String#concat takes multiple arguments.
 str6 << ' '
-puts str6.concat("u doin?")        # "Joey: How u doin?"
+puts str6.concat("u", " doin?")        # "Joey: How u doin?"
+puts str6 + " +(operator) Doesn't change actual String."
 
 puts '---each_char and chars---'
 'Iterate Over'.each_char { |ch| puts ch }
@@ -112,13 +114,15 @@ puts str7.gsub('dogs', 'cats')    # "We have many cats"
 # If you want to apply the changes to the original string you can use the gsub! method.
 
 puts "---gets and chomp---"
-# gets is used to get input form user.
+# gets is used to get input form user (in string format.)
+# To get user input in integer format use - gets.to_i 
 str8 = gets.chomp                 # DOUBT
+# chomp removes new line (\n) and carriage return (\r) characters from end of string.
 puts str8
 
 
 puts "---count---"
 # It counts the occurrence of character. It is Case-sensitive.
-str = "Alpa Beta"
-puts str.count("a")      # 3
-puts str.count("b")      # 1
+str9 = "Alpha Beta"
+puts str9.count("a")      # 2
+puts str9.count("b")      # 0

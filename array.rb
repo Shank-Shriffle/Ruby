@@ -138,3 +138,7 @@ arr4 = [1, 2, 2, 3, 'Apple', 'Apple', 'Mango']
 print "Unique elements of array: #{arr4.uniq}"
 puts
 
+puts "---tally---"
+# Tally counts each element's occurrences and 
+# returns a hash where the key is the element, and the value is the count.
+puts arr4.tally
