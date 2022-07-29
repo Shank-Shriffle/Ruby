@@ -1,3 +1,13 @@
+# Ruby module is a collection of methods and constants. 
+# A module method may be instance method or module method.
+
+# Instance methods are methods in a class when module is included.
+
+# Module methods may be called without creating an encapsulating object 
+# while instance methods may not.
+
+# Objects or subclasses can not be created using modules.
+
 module Tools
   def show(para)
     puts "#{para} is my Module."
@@ -15,7 +25,6 @@ Tools.display
 Tools.show('Tools')
 # show("Tools")      --Also Valid--
 puts
-
 
 # ------Multiple Inheritance or Mixin------
 puts '------Multiple Inheritance or Mixin------'

@@ -7,7 +7,6 @@ end
 simple_method
 puts
 
-
 # ------Method with Parameters------
 puts '------Method with Parameters------'
 def para_method(para1 = 'GFG', para2 = 'G4G')
@@ -23,7 +22,6 @@ puts 'Without Parameters-'
 para_method
 puts
 
-
 # ------Method with Variable Parameters------
 puts '------Method with Variable Parameters------'
 def var_para_method(*var_para)
@@ -36,10 +34,9 @@ def var_para_method(*var_para)
 end
 
 # Calling method by passing variable number of arguments.
-var_para_method 'Ram', 'Shyam'
-var_para_method 'Karan'
+var_para_method('Ram', 'Shyam')
+var_para_method('Karan')
 puts
-
 
 # ------Method with Return Statement------
 puts '------Method with Return Statement------'
@@ -76,7 +73,6 @@ puts var_ret
 print 'Value of y: ', y
 # print "Value of y: #{y}"      --Also valid (Works same as above)--
 puts "\n\n"
-
 
 # ------Class vs Instance Methods vs Method which is outside of Class------
 puts '------Class vs Instance Methods vs Method which is outside of Class------'
@@ -138,22 +134,21 @@ outside_method
 # TestMethods.outside_method    --Invalid Syntax (Error)--
 puts
 
-
 # ------Calling vs Printing Method------
-puts "------Calling vs Printing Method------"
+puts '------Calling vs Printing Method------'
 def sample_method
-  puts "I am Sample Mehtod."
+  puts 'I am Sample Mehtod.'
   x = 251
   y = 351
 end
 # Simply Calling a method.
-puts "Simply calling a method: "
+puts 'Simply calling a method: '
 # This won't print the x and y value or last statement value.
 sample_method
 puts
-# Printing a method, It prints the last statement along with any 
+# Printing a method, It prints the last statement along with any
 # puts statements.
-puts "Now printing the method using puts: "
+puts 'Now printing the method using puts: '
 puts sample_method
-puts 
+puts
 puts "Printing a method, prints its last statement: #{sample_method}"
