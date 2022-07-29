@@ -6,7 +6,7 @@ require_relative 'module'
 puts "------Outside Module starts here------"
 # include is NOT REQUIRED here because Tools is already included 
 # in the module.rb file itself, which is required above.
-# include Tools  
+include Tools
 Tools.display
 # display                 --Also Valid--
 
@@ -22,3 +22,4 @@ obj = TestClass.new
 obj.test_method
 # Module method called with Class object.
 obj.display
+ 
