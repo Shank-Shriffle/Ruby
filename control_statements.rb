@@ -24,12 +24,12 @@ class UnlessElse
   # ------Unless------
   marks = 90
 
-  if marks >= 33
-    puts 'Pass!'
+  unless marks >= 33
+    puts "Fail!"
+  # elsif  (marks <=79 and marks >= 60)     --Syntax Error--  
+  #   puts "Average Marks"
   else
-    puts 'Fail!'
-    # elsif  (marks <=79 and marks >= 60)     --Syntax Error--
-    # 	puts "Average Marks"
+    puts "Pass!"
   end
   # There is no elsif or elsunless for Unless.
 end
