@@ -113,14 +113,14 @@ class TestMethods
   # outside_method              --Invalid Syntax (Error)--
 end
 
-print 'Calling class method: '
+print 'Calling class method outside the Class: '
 TestMethods.class_method
 # self.class_method             --Invalid Syntax (Error)--
 # class method can be defined using 'self' keyword but
 # cannot be called using 'self' keyword outside the class.
 
 obj = TestMethods.new
-print 'Calling instance method: '
+print 'Calling instance method outside the Class: '
 obj.inst_method
 # TestMethods.new.inst_method      --Also valid--
 # inst_method                   --Invalid Syntax (Error)--
@@ -133,6 +133,32 @@ print 'Calling method which is outside of class: '
 outside_method
 # obj.outside_method            --Invalid Syntax (Error)--
 # TestMethods.outside_method    --Invalid Syntax (Error)--
+puts
+
+# ------Class vs Instance Methods vs Method which is inside of Class------
+puts '------Class vs Instance Methods vs Method which is inside of Class------'
+class TestMethods2
+  def self.class_method1
+    class_method2
+    # A class method can only call another class method inside it.
+  end
+
+  def self.class_method2
+    puts "A class method can only call another class method inside it."
+  end
+
+  def inst_method1
+    inst_method2
+    # An instance method can only call another instance method inside it.
+  end
+
+  def inst_method2
+    puts "An instance method can only call another instance method inside it."
+  end
+end
+
+TestMethods2.class_method1
+TestMethods2.new.inst_method1
 puts
 
 # ------Calling vs Printing Method------
